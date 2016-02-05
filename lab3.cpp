@@ -45,7 +45,26 @@ int main(int argc, char*argv[]){
 						cout << stats[i][j] << "--";
 				}
 			}
-			//ejercicio2(stats,f,c);
+			int atq1 = stats[rand() % 4][0]; 
+			int def1 = stats[rand() % 4][1];
+			int spd1 = stats[rand() % 4][2];
+			int atq2 = stats[rand() % 4][0]; 
+			int def2 = stats[rand() % 4][1];
+			int spd2 = stats[rand() % 4][2];
+			int puntos1 = atq1 - def2;
+			int puntos2 = atq2 - def1;
+			if (puntos1 > puntos2){
+				cout << "GANO JUGADOR 1\nPuntos: " << puntos1 - puntos2<< endl;
+			}else if (puntos1 < puntos2){
+				cout << "GANO JUGADOR 2\nPuntos: " << puntos2 - puntos1 << endl;
+			}else{
+				if (spd1 > spd2){
+					cout << "GANO JUGADOR 1 por velocidad" << endl;
+				}else if(spd1 < spd2){
+					cout << "GANO JUGADOR 2 por velocidad" << endl;
+				}else
+					cout << "EMPATE TOTAL" << endl;
+			}
 			cout << "Si desea seguir presione 1: ";
 			cin >> menu;
 			if (menu != 1)
