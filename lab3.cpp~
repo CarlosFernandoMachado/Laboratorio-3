@@ -77,6 +77,7 @@ int main(int argc, char*argv[]){
 }
 
 void ejercicio1(int magic, int score[], int size){
+	cout << magic << endl;
 	int Try,cont = 0;
 	bool seguir = true;
 	while(seguir){
